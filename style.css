@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-image: url("static/galaxy.jpg");
+    background-size: cover;
+}
+img[alt="earth"] {
+    height: 95vh;
+    width: auto;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    position: relative;
+    z-index: 1;
+}
+img[alt='moon'] {
+    z-index: 0;
+    height: 15vh;
+    width: auto;
+    position: absolute;
+    top: 40vh;
+    left: 45vw;
+    animation: 5s orbit linear infinite;
+}
+@keyframes orbit {
+    0% {
+        top: 35vh;
+        left: 73vw;
+        z-index: 2;
+        height: 17vh;
+    }
+    25% {
+        top: 40vh;
+        left: 45vw;
+        z-index: 2;
+        height: 20vh
+    }
+    50% {
+        top: 35vh;
+        left: 15vw;
+        z-index: 0;
+        height: 17vh;
+    }
+    75% {
+        top: 40vh;
+        left: 40vw;
+        height: 15vh;
+        z-index: 0;
+    }
+    100%{
+        top: 35vh;
+        left: 73vw;
+        height: 17vh;
+        z-index: 0;
+    }
+}
